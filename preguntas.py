@@ -71,17 +71,19 @@ def pregunta_01():
     df.drop(columns=['veil_type'], inplace=True, axis=1)
 
     # Asigne la columna `type` a la variable `y`.
-    y = df["type"].copy
+    y = df.type
 
     # Asigne una copia del dataframe `df` a la variable `X`.
     X = df.copy()
 
     # Remueva la columna `type` del DataFrame `X`.
     X.drop(columns=['type'], inplace=True, axis=1)
-
+    print(X.shape)
+    print(y.shape)
     # Retorne `X` y `y`
     return X, y
 
+pregunta_01()
 
 def pregunta_02():
     """
